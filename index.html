@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-wrap">
+        <div class="login-info">
+            <div class="show"></div>
+        </div>
+        <form action="POST" class="login-form">
+            <div class="login-option">
+                <a href="#">Sign In</a>
+                <span>or</span>
+                <a href="#">Sign Up</a>
+            </div>
+            <div class="login-inputs">
+                <!--帳號區-->
+                <label for="inputName" class="input-label">帳號</label>
+                <input type="text" name="inputName" id="inputName" class="input-text" placeholder="enter your Name">
+                <!--密碼區-->
+                <label for="inputPassword" class="input-label">密碼</label>
+                <input type="password" name="inputPassword" id="inputPassword" class="input-text" placeholder="enter your Password">
+                <!--帳號記憶區-->
+                <input type="checkbox" name="inputMemory" id="inputMemory">
+                <label for="inputMemory" class="input-label">是否記憶帳號</label>
+                <button type="submit" class="login-button">登入</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
