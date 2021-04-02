@@ -9,9 +9,20 @@
 <body>
     <div class="login-wrap">
         <div class="login-info">
-            <div class="show"></div>
+            <div class="show-container">
+                <ul class="show-groups">
+                    <li class="show-item" id="showName"></li>
+                    <li class="show-item"></li>
+                </ul>
+            </div>
+            <nav class="nav-info-container">
+                <ul class="nav-info-groups">
+                    <li class="nav-info-item"></li>
+                    <li class="nav-info-item"></li>
+                </ul>
+            </nav>
         </div>
-        <form action="POST" class="login-form">
+        <form action="./src/js/select.js" class="login-form" method="POST">
             <div class="login-option">
                 <a href="#">Sign In</a>
                 <span>or</span>
@@ -20,7 +31,7 @@
             <div class="login-inputs">
                 <!--帳號區-->
                 <label for="inputName" class="input-label">帳號</label>
-                <input type="text" name="inputName" id="inputName" class="input-text" placeholder="enter your Name">
+                <input type="text" name="inputId" id="inputId" class="input-text" placeholder="enter your account ID">
                 <!--密碼區-->
                 <label for="inputPassword" class="input-label">密碼</label>
                 <input type="password" name="inputPassword" id="inputPassword" class="input-text" placeholder="enter your Password">
@@ -31,5 +42,6 @@
             </div>
         </form>
     </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </body>
 </html>
