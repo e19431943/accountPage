@@ -9,7 +9,8 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 {
     $account = $_POST['inputId'];
     $password =$_POST['inputPassword'];
-    $sql = "SELECT UserName FROM account WHERE UserId = 'admin' AND Password = 'we1219'";
+    
+    $sql = "SELECT UserName FROM account WHERE UserId = '{$account}' AND Password = '{$password}'";
     /*連接資料庫中 */
     $connect = mysqli_connect($serverName,$DB_User,$DB_Password,$DB_Name,$DB_Post);
     
@@ -29,7 +30,6 @@ if($_SERVER['REQUEST_METHOD']=='POST')
     else
     {
         die("error");
-
     }
 }
 else
