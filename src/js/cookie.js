@@ -4,6 +4,7 @@ let form =document.getElementById('loginForm');
 window.onload=()=>
 {
     
+    
     //判斷cookie是否有值
     if(getCookie('id'))
     {
@@ -46,6 +47,7 @@ form.addEventListener('submit',()=>
  function getCookie(userid)
  {
     let currentCookie = document.cookie;
+    
     if(currentCookie.indexOf(userid)>=0)
     {
         let myCookie = document.cookie.split('; ');

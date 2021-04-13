@@ -44,13 +44,34 @@ for(let i =0;i< option.length;i++ )
 {
     option[i].addEventListener('click',function()
     {
-        changeOPtionColor(this,i);
+        if(this.dataset.value == "true")
+        {
+            return "";
+        }
+        else
+        {
+            resetOptionColor();
+            changeOPtionColor(this,i);
+        }
     });
 }
 
-function changeOPtionColor(target,index)
+function changeOPtionColor(target,index) /*按下去時顏色*/
 {
+    
     let optionArray=[0,-250];
-    target.style.setProperty('color','#333');
+    target.style.setProperty('color','#aaa');
+    target.dataset.value= "true";
     document.getElementById('loginMainShow').style.setProperty('left',`${optionArray[index]}px`);
+    
+}
+function resetOptionColor() 
+{
+    let target =  document.querySelector("a[data-value='true']"); //會抓出曾被按過，來把她reset
+    if(target != null)
+    {
+        
+        target.style.setProperty('color','#333'); 
+        target.dataset.value="false";
+    }
 }
