@@ -37,7 +37,7 @@ else
     die("錯誤");
 }
 
-
+mysqli_close($connect);
 
 
 ?>
