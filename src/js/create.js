@@ -1,5 +1,6 @@
 $('#createForm').submit(function() 
 { 
+    console.log("r5es");
     changeInfoPage(1);
     /*判斷的部分 */
     isEmpty();
@@ -9,8 +10,8 @@ $('#createForm').submit(function()
         url: "./src/php/create.php",
         data: $("#createForm").serialize(), //把清單中有name值轉成查詢字串
         dataType: "json",
-        success: function (e) {
-            console.log("test");
+        success: function (json) {
+            $("#showName").html(json);
         }
     });
 
